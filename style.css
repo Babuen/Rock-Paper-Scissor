@@ -1,0 +1,127 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    color: #333;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* Game choices */
+.choices {
+    margin-top: 5rem;
+    display: flex;
+    gap: 70px;
+    margin-bottom: 30px;
+
+}
+
+
+
+.choice {
+    width: 120px;
+    height: 120px;
+    background-color: #ffffffdd;
+    border-radius: 50%;
+     
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+}
+
+.choice:hover {
+    transform: scale(1.1);
+    background-color: #ffe600;
+}
+
+.choice img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* Scoreboard */
+.score-board {
+    margin-top:4rem;
+    display: flex;
+    gap: 100px;
+    margin-bottom: 30px;
+}
+
+.score {
+    background-color: #ffffffcc;
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.score p:first-child {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.score p:last-child {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Message Box */
+.msg-container {
+    margin-top:3rem;
+    background-color: #fff;
+    padding: 15px 30px;
+    border-radius: 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: background-color 0.4s ease;
+    color: black;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .choices {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .choice {
+        width: 90px;
+        height: 90px;
+    }
+
+    .score-board {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .msg-container {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+}
